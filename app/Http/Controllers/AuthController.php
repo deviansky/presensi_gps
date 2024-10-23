@@ -12,7 +12,7 @@ class AuthController extends Controller
         if(Auth ::guard('Mahasiswa')->attempt(['nim'=>$request->nim,'password'=>$request->password])) {
             return redirect('/dashboard');
         } else {
-            echo "gagal login";
+            echo "Salah login";
         }
     }
 }
